@@ -11,3 +11,5 @@ gpu_h100,8,8,4g,256m,POSIX,foss_2023,Max Read: 4765.25 MiB/sec (4996.73 MB/sec),
 gpu_h100,8,8,4g,256m,POSIX,foss_2023,Max Write: 5509.71 MiB/sec (5777.35 MB/sec),write
 gpu_h100,8,8,8g,256m,POSIX,foss_2023,Max Read: 12716.37 MiB/sec (13334.08 MB/sec),read
 gpu_h100,8,8,8g,256m,POSIX,foss_2023,Max Write: 8253.69 MiB/sec (8654.62 MB/sec),write
+gpu_h100,8,8,16g,256m,POSIX,foss_2023,Max Read: 13215.28 MiB/sec (13857.23 MB/sec),read
+gpu_h100,8,8,16g,256m,POSIX,foss_2023,Max Write: 10397.67 MiB/sec (10902.75 MB/sec),write
