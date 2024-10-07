@@ -1,2 +1,2 @@
 # IOR_test
-<img src="IO_per_filesize_segment1_transfersize256M.png" width="700"/>
+<img src="IO_per_filesize_segment1_transfersize256M_zoom.png" width="700"/>
