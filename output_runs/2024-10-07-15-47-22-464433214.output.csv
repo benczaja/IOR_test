@@ -1,0 +1,15 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+fat_rome,8,8,256m,256m,POSIX,foss_2023,Max Read: 17302.38 MiB/sec (18142.86 MB/sec),read
+fat_rome,8,8,256m,256m,POSIX,foss_2023,Max Write: 4945.02 MiB/sec (5185.23 MB/sec),write
+fat_rome,8,8,512m,256m,POSIX,foss_2023,Max Read: 14254.23 MiB/sec (14946.64 MB/sec),read
+fat_rome,8,8,512m,256m,POSIX,foss_2023,Max Write: 3691.28 MiB/sec (3870.59 MB/sec),write
+fat_rome,8,8,1g,256m,POSIX,foss_2023,Max Read: 11731.84 MiB/sec (12301.72 MB/sec),read
+fat_rome,8,8,1g,256m,POSIX,foss_2023,Max Write: 4106.64 MiB/sec (4306.13 MB/sec),write
+fat_rome,8,8,2g,256m,POSIX,foss_2023,Max Read: 7694.09 MiB/sec (8067.84 MB/sec),read
+fat_rome,8,8,2g,256m,POSIX,foss_2023,Max Write: 6689.53 MiB/sec (7014.48 MB/sec),write
+fat_rome,8,8,4g,256m,POSIX,foss_2023,Max Read: 6142.67 MiB/sec (6441.06 MB/sec),read
+fat_rome,8,8,4g,256m,POSIX,foss_2023,Max Write: 4633.49 MiB/sec (4858.57 MB/sec),write
+fat_rome,8,8,8g,256m,POSIX,foss_2023,Max Read: 6578.39 MiB/sec (6897.94 MB/sec),read
+fat_rome,8,8,8g,256m,POSIX,foss_2023,Max Write: 5810.08 MiB/sec (6092.31 MB/sec),write
+fat_rome,8,8,16g,256m,POSIX,foss_2023,Max Read: 5330.62 MiB/sec (5589.56 MB/sec),read
+fat_rome,8,8,16g,256m,POSIX,foss_2023,Max Write: 3821.15 MiB/sec (4006.76 MB/sec),write

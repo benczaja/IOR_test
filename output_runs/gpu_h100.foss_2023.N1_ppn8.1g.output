@@ -1,0 +1,48 @@
+IOR-3.3.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct  7 13:55:39 2024
+Command line        : ior-3.3.0/src/ior -F -C -e -g -w -r -K -s 1 -t 256m -i 3 -b 1g -o tempout
+Machine             : Linux gcn116.local.snellius.surf.nl
+TestID              : 0
+StartTime           : Mon Oct  7 13:55:39 2024
+Path                : /gpfs/scratch1/shared/benjamic/IOR_TEST/gpu_h100_N1_ppn8
+FS                  : 2473.6 TiB   Used FS: 14.9%   Inodes: 200.0 Mi   Used Inodes: 56.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : tempout
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 8
+clients per node    : 8
+repetitions         : 3
+xfersize            : 256 MiB
+blocksize           : 1 GiB
+aggregate filesize  : 8 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+write     8572       33.58      0.186738    1048576    262144     0.002576   0.952938   0.000167   0.955689   0   
+read      27799      108.64     0.055807    1048576    262144     0.000039   0.294550   0.000087   0.294683   0   
+remove    -          -          -           -          -          -          -          -          0.001797   0   
+write     5401       21.12      0.259770    1048576    262144     0.001589   1.52       0.000154   1.52       1   
+read      25685      100.38     0.051063    1048576    262144     0.000045   0.318801   0.000085   0.318942   1   
+remove    -          -          -           -          -          -          -          -          0.001609   1   
+write     7853       30.71      0.218539    1048576    262144     0.001187   1.04       0.000167   1.04       2   
+read      28742      112.32     0.046276    1048576    262144     0.000043   0.284908   0.000059   0.285023   2   
+remove    -          -          -           -          -          -          -          -          0.001102   2   
+Max Write: 8571.82 MiB/sec (8988.21 MB/sec)
+Max Read:  28741.54 MiB/sec (30137.69 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8571.82    5400.79    7275.04    1357.44      33.48      21.10      28.42       5.30    1.17191         NA            NA     0      8   8    3   1     1        1         0    0      1 1073741824 268435456    8192.0 POSIX      0
+read        28741.54   25684.93   27408.60    1278.08     112.27     100.33     107.06       4.99    0.29955         NA            NA     0      8   8    3   1     1        1         0    0      1 1073741824 268435456    8192.0 POSIX      0
+Finished            : Mon Oct  7 13:55:43 2024

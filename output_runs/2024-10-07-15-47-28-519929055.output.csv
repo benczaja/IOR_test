@@ -1,0 +1,15 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+fat_genoa,8,8,256m,256m,POSIX,foss_2023,Max Read: 33499.25 MiB/sec (35126.51 MB/sec),read
+fat_genoa,8,8,256m,256m,POSIX,foss_2023,Max Write: 2631.40 MiB/sec (2759.22 MB/sec),write
+fat_genoa,8,8,512m,256m,POSIX,foss_2023,Max Read: 24773.81 MiB/sec (25977.22 MB/sec),read
+fat_genoa,8,8,512m,256m,POSIX,foss_2023,Max Write: 4492.31 MiB/sec (4710.52 MB/sec),write
+fat_genoa,8,8,1g,256m,POSIX,foss_2023,Max Read: 9367.83 MiB/sec (9822.89 MB/sec),read
+fat_genoa,8,8,1g,256m,POSIX,foss_2023,Max Write: 3970.00 MiB/sec (4162.85 MB/sec),write
+fat_genoa,8,8,2g,256m,POSIX,foss_2023,Max Read: 9450.42 MiB/sec (9909.48 MB/sec),read
+fat_genoa,8,8,2g,256m,POSIX,foss_2023,Max Write: 3396.92 MiB/sec (3561.93 MB/sec),write
+fat_genoa,8,8,4g,256m,POSIX,foss_2023,Max Read: 5333.70 MiB/sec (5592.79 MB/sec),read
+fat_genoa,8,8,4g,256m,POSIX,foss_2023,Max Write: 4460.78 MiB/sec (4677.47 MB/sec),write
+fat_genoa,8,8,8g,256m,POSIX,foss_2023,Max Read: 6404.23 MiB/sec (6715.32 MB/sec),read
+fat_genoa,8,8,8g,256m,POSIX,foss_2023,Max Write: 6347.53 MiB/sec (6655.87 MB/sec),write
+fat_genoa,8,8,16g,256m,POSIX,foss_2023,Max Read: 5284.34 MiB/sec (5541.03 MB/sec),read
+fat_genoa,8,8,16g,256m,POSIX,foss_2023,Max Write: 4296.84 MiB/sec (4505.57 MB/sec),write
