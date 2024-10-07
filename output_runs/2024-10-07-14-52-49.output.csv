@@ -1,0 +1,15 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+gpu_h100,8,8,256m,256m,POSIX,foss_2023,Max Read: 59974.23 MiB/sec (62887.53 MB/sec),read
+gpu_h100,8,8,256m,256m,POSIX,foss_2023,Max Write: 554.88 MiB/sec (581.83 MB/sec),write
+gpu_h100,8,8,512m,256m,POSIX,foss_2023,Max Read: 6784.25 MiB/sec (7113.80 MB/sec),read
+gpu_h100,8,8,512m,256m,POSIX,foss_2023,Max Write: 5160.22 MiB/sec (5410.88 MB/sec),write
+gpu_h100,8,8,1g,256m,POSIX,foss_2023,Max Read: 4702.47 MiB/sec (4930.89 MB/sec),read
+gpu_h100,8,8,1g,256m,POSIX,foss_2023,Max Write: 2598.98 MiB/sec (2725.23 MB/sec),write
+gpu_h100,8,8,2g,256m,POSIX,foss_2023,Max Read: 4339.52 MiB/sec (4550.31 MB/sec),read
+gpu_h100,8,8,2g,256m,POSIX,foss_2023,Max Write: 7162.70 MiB/sec (7510.63 MB/sec),write
+gpu_h100,8,8,4g,256m,POSIX,foss_2023,Max Read: 6420.92 MiB/sec (6732.83 MB/sec),read
+gpu_h100,8,8,4g,256m,POSIX,foss_2023,Max Write: 5661.84 MiB/sec (5936.87 MB/sec),write
+gpu_h100,8,8,8g,256m,POSIX,foss_2023,Max Read: 4609.81 MiB/sec (4833.73 MB/sec),read
+gpu_h100,8,8,8g,256m,POSIX,foss_2023,Max Write: 3689.11 MiB/sec (3868.31 MB/sec),write
+gpu_h100,8,8,16g,256m,POSIX,foss_2023,Max Read: 13424.07 MiB/sec (14076.15 MB/sec),read
+gpu_h100,8,8,16g,256m,POSIX,foss_2023,Max Write: 10098.64 MiB/sec (10589.19 MB/sec),write
