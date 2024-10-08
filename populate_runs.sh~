@@ -1,0 +1,94 @@
+#!/bin/bash
+
+################################################################
+################################################################
+# Change the inpformation between the two large rows of #####
+case=POSIX
+partition=genoa
+toolchainscript="foss_2023"
+nodes=( 1 2 4 8 16 )
+ppns=( 8 )
+Wtime="00:30:00"
+####### ARGUMENTS #########
+EXEC_ARGS="-F -C -e -g -w -r -K -b 8g -a POSIX -s 1 -i 5 -o ior.$partition.$toolchainscript.$case"
+###### Important Directories ###########
+source_dir="/home/benjamic/IOR_TEST"
+run_dir="/scratch-shared/benjamic/IOR_TEST"
+################################################################
+################################################################
+
+mkdir -p $run_dir
+
+case+="_$partition"
+
+for node in "${nodes[@]}"
+do
+    for ppn in "${ppns[@]}"
+    do
+	subcase="N${node}_ppn${ppn}"
+	
+	#make the case directory
+	mkdir "$run_dir/${case}_${subcase}"
+
+	#copy executable
+	rsync -av "$source_dir/ior-3.3.0" "$run_dir/${case}_${subcase}"
+
+	#move to the case  directory
+	cd "$run_dir/${case}_${subcase}"
+
+	# Remove jobscript
+	rm run.sh
+	
+	ntasks="$((node * ppn))"
+
+	echo "#!/bin/bash" >> run.sh
+	echo "  " >> run.sh
+	echo "  " >> run.sh
+
+	echo "#SBATCH --job-name=$subcase" >> run.sh
+	echo "#SBATCH --ntasks=$ntasks" >> run.sh
+	echo "#SBATCH --ntasks-per-node=$ppn" >> run.sh	
+	echo "#SBATCH --output=run.out" >> run.sh
+	echo "#SBATCH --error=run.err" >> run.sh
+	echo "#SBATCH --time=$Wtime" >> run.sh
+	echo "#SBATCH -p $partition" >> run.sh			
+
+	echo " " >> run.sh
+	echo " " >> run.sh
+
+	echo "source $source_dir/$toolchainscript.sh" >> run.sh
+
+	echo " " >> run.sh
+	echo " " >> run.sh
+
+	echo 'dtg=$( date +"%Y-%m-%d-%H-%M" )' >> run.sh
+
+	echo " " >> run.sh
+	echo " " >> run.sh
+
+
+	
+	echo " " >> run.sh
+	echo " " >> run.sh	
+	
+	echo "srun ior-3.3.0/src/ior $EXEC_ARGS > out.$case.$toolchainscript.$subcase.txt" >> run.sh
+
+	echo " " >> run.sh
+	echo " " >> run.sh
+
+	echo "cp out.$case.$toolchainscript.$subcase.txt $source_dir/output_runs " >> run.sh	
+	
+	
+	# Submit the jobscript
+	echo "Submitting jobscript from.... "
+	pwd
+	echo " "
+	sbatch run.sh
+
+	#move back and do it again :)
+	cd $project_dir
+
+    done
+done
+
+
