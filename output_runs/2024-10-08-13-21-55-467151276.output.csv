@@ -1,0 +1,3 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+gpu_h100,8,8,8g,4m,POSIX,foss_2023,Max Read: 2668.93 MiB/sec (2798.57 MB/sec),read
+gpu_h100,8,8,8g,4m,POSIX,foss_2023,Max Write: 864.93 MiB/sec (906.94 MB/sec),write

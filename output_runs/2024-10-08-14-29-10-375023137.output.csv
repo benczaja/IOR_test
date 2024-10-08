@@ -1,0 +1,3 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+fat_genoa,16,8,8g,4m,POSIX,foss_2023,Max Read: 2192.52 MiB/sec (2299.03 MB/sec),read
+fat_genoa,16,8,8g,4m,POSIX,foss_2023,Max Write: 737.70 MiB/sec (773.53 MB/sec),write

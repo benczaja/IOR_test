@@ -1,0 +1,3 @@
+partition,ntasks,ntasks_per_node,block_size,transfer_size,access_type,toolchain,IO_perf,IO_type
+rome,128,128,8g,4m,POSIX,foss_2023,Max Read: 4803.78 MiB/sec (5037.13 MB/sec),read
+rome,128,128,8g,4m,POSIX,foss_2023,Max Write: 3266.27 MiB/sec (3424.93 MB/sec),write
