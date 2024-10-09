@@ -3,6 +3,28 @@ Sources used for this benchmark
 - https://ior.readthedocs.io/en/latest/userDoc/tutorial.html
 - https://cug.org/5-publications/proceedings_attendee_lists/2007CD/S07_Proceedings/pages/Authors/Shan/Shan_paper.pdf
 
+
+### Parameters used for the test
+
+-e -g -K -i
+
+Currently we are running IOR with these options
+```
+    -a API POSIX|MPIIO|HDF5
+    -w (WriteFile File) indicate whether to measure the write operation
+    -r (ReadFile File) indicate whether to measure the read operation
+    -s 1 (SegmentCount) decides the number of datasets in the file
+    -F (filePerProc) I/O one file per process
+    -C (reorderTasksConstant) changes task ordering to n+1 ordering for readback. This helps defend against node memory (block buffer cache) effects when reading after write.
+    -e (fsync) perform fsync upon POSIX write close. Stops effects of the page cache on write performance. Forces the dirty pages we just wrote to flush out to GPFS
+    -g (intraTestBarriers) use barriers between open, write/read, and close
+    -K (keepFileWithError) keep error-filled file(s) after data-checking
+    -b (BlockSize) represents the size of the subdomain of the dataset stored on each processor
+    -t (TransferSize) the I/O transaction size used to transfer data from memory to the data file, which may require multiple transfers per segment to copy the entire “BlockSize” to the data file.
+    -i 3 (numerber of repetitions) number of repetitions of test
+```
+
+
 ## IOR single node benchmark for GPFS (Snellius)
 
 ### Finding the correct blocksize and transfersize
